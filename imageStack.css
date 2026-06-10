@@ -1,0 +1,172 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: whitesmoke;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    width: 90%;
+    max-width: 1000px;
+    align-items: center;
+    justify-content: space-around;
+}
+
+/* --- IMAGE SLIDER SECTION --- */
+.view {
+    width: 450px;
+    height: 450px; /* Container ko height dena zaroori hai vertical stack ke liye */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.images {
+    position: relative;
+    width: 320px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.images:hover {
+    cursor: pointer;
+}
+
+/* Sabhi images ki common styling fixing alignment */
+.images img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+    filter: grayscale(100%);
+    opacity: 0.6;
+    transition: all 0.3s ease;
+}
+
+/* Vertical Stacking Order & Sizes using scale and translateY */
+/* ---- Is naye code ko wahan paste karein ---- */
+.five {
+    transform: translateY(-110px) scale(0.75);
+    z-index: 1;
+    opacity: 0.4 !important;
+}
+
+.four {
+    transform: translateY(-55px) scale(0.85);
+    z-index: 2;
+    opacity: 0.7 !important;
+}
+
+/* Center Highlighted Image (Image 3) */
+.images .main-featured {
+    transform: scale(1) translateY(0);
+    filter: grayscale(0%);
+    opacity: 1;
+    z-index: 5;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.two {
+    transform: translateY(55px) scale(0.85);
+    z-index: 2;
+}
+
+.one {
+    transform: translateY(110px) scale(0.75);
+    z-index: 1;
+    opacity: 0.4 !important;
+}
+
+/* ================= HOVER EFFECT LOGIC ================= */
+
+/* Jab pooray container par hover ho, toh baaki images halki dundli ho jayein */
+.images:hover img {
+    filter: grayscale(100%);
+    opacity: 0.4;
+    z-index: 2;
+    box-shadow: none;
+}
+
+/* Jis image par mouse jayega, woh center mein aakar color ho jayegi */
+.images img:hover {
+    transform: scale(1.05) translateY(0) !important; 
+    filter: grayscale(0%) !important;               
+    opacity: 1 !important;                           
+    z-index: 10 !important;                          
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);       
+}
+/* --- RIGHT SIDE CONTENT SECTION --- */
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 360px;
+    text-align: center;
+}
+
+.buttons {
+    margin-bottom: 25px;
+}
+
+.arrow {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    background-color: #4a77e5; /* Thoda professional blue color */
+    color: white;
+    border-radius: 50%;
+    margin: 0 5px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.text {
+    width: 100%;
+    border-top: 2px solid #e2e8f0;
+    border-bottom: 2px solid #e2e8f0;
+    padding: 20px 0;
+}
+
+.text h1 {
+    font-size: 28px;
+    color: #1a365d;
+    margin-bottom: 5px;
+}
+
+.text h4 {
+    font-size: 11px;
+    color: #718096;
+    letter-spacing: 2px;
+}
+
+.dots {
+    margin-top: 25px;
+}
+
+.dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background-color: lightgray;
+    border-radius: 50%;
+    margin: 0 4px;
+}
+
+.dot.active {
+    background-color: #1b365d;
+    transform: scale(1.3);
+}

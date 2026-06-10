@@ -1,0 +1,16 @@
+#flex{
+    border: 1px solid black;
+    width: 200px;
+    height: 200px;
+    background-color: rgb(232, 98, 140);
+}
+.direction{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 20px;
+    height: 100vh;
+    border: 1px solid black;
+
+}
