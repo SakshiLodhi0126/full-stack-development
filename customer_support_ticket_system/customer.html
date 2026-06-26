@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Portal - Tiko</title>
+    <link rel="stylesheet" href="customer.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">Tiko⚡</div>
+
+        <nav>
+            <a href="tiko.html">Home</a>
+            <a href="customer.html">Customer Portal</a>
+            <a href="agent.html">Agent Workspace</a>
+        </nav>
+    </header>
+
+    <section class="container">
+
+        <h1>Customer Support Portal</h1>
+
+        <p>
+            Fill out the form below to create a support ticket.
+        </p>
+
+        <form id="ticketForm">
+
+            <label for="name">Full Name</label>
+            <input
+                type="text"
+                id="name"
+                placeholder="Enter your name"
+                required>
+
+            <label for="email">Email</label>
+            <input
+                type="email"
+                id="email"
+                placeholder="Enter your email"
+                required>
+
+            <label for="category">Issue Category</label>
+
+            <select id="category">
+
+                <option value="">Select Category</option>
+                <option>Technical Issue</option>
+                <option>Billing</option>
+                <option>Account Issue</option>
+                <option>General Query</option>
+
+            </select>
+
+            <label for="priority">Priority</label>
+
+            <select id="priority">
+
+                <option>Low</option>
+                <option>Medium</option>
+                <option>High</option>
+
+            </select>
+
+            <label for="message">Describe Your Issue</label>
+
+            <textarea
+                id="message"
+                rows="6"
+                maxlength="250"
+                placeholder="Write your issue here..."
+                required></textarea>
+
+            <p id="counter">0 / 250</p>
+
+            <button type="submit">
+                Submit Ticket
+            </button>
+
+        </form>
+
+    </section>
+
+    <footer>
+        <p>© 2026 Tiko Customer Support System</p>
+    </footer>
+
+    <script src="customer.js"></script>
+
+</body>
+</html>
