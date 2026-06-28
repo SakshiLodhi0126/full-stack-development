@@ -2,12 +2,12 @@
 
 var button = document.getElementById("resolveBtn");
 
-var status = document.getElementById("status");
+var ticketStatus = document.getElementById("status");
 
 button.onclick = function(){
 
-    status.innerHTML = "Resolved";
+    ticketStatus.innerHTML = "Resolved";
 
-    status.style.color = "green";
+    ticketStatus.style.color = "green";
 
 }
