@@ -1,19 +1,17 @@
-const form = document.getElementById("ticketForm");
-const message = document.getElementById("message");
-const counter = document.getElementById("counter");
+// Submit button
 
-message.addEventListener("input", function () {
-    counter.textContent = message.value.length + " / 250";
-});
+var form = document.getElementById("ticketForm");
 
-form.addEventListener("submit", function (event) {
+form.onsubmit = function(){
 
-    event.preventDefault();
+    alert("Your ticket has been submitted successfully.");
 
-    let ticketId = "TK" + Math.floor(Math.random() * 9000 + 1000);
+}
 
-    alert("Ticket Submitted Successfully!\n\nYour Ticket ID is: " + ticketId);
+// Reset button
 
-    form.reset();
-    counter.textContent = "0 / 250";
-});
+form.onreset = function(){
+
+    alert("Form has been cleared.");
+
+}

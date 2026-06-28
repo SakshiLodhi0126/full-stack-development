@@ -1,91 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Agent Workspace - Tiko</title>
+
     <link rel="stylesheet" href="agent.css">
+
 </head>
+
 <body>
 
+    <!-- Header -->
+
     <header>
-        <div class="logo">Tiko⚡</div>
 
-        <nav>
-            <a href="tiko.html">Home</a>
-            <a href="customer.html">Customer Portal</a>
-            <a href="agent.html">Agent Workspace</a>
-        </nav>
-    </header>
+        <div class="logo">
 
-    <section class="dashboard">
+            <h2>Tiko⚡</h2>
 
-        <h1>Agent Workspace</h1>
-
-        <div class="stats">
-
-            <div class="card">
-                <h2>Total Tickets</h2>
-                <p>3</p>
-            </div>
-
-            <div class="card">
-                <h2>Pending</h2>
-                <p>2</p>
-            </div>
-
-            <div class="card">
-                <h2>Resolved</h2>
-                <p>1</p>
-            </div>
+            <span>Every Ticket Matters.</span>
 
         </div>
 
-        <h2>Recent Tickets</h2>
+        <nav>
+
+            <a href="tiko.html">Home</a>
+
+            <a href="customer.html">Customer Portal</a>
+
+            <a href="agent.html">Agent Workspace</a>
+
+        </nav>
+
+    </header>
+
+    <!-- Agent Section -->
+
+    <section class="agent-section">
+
+        <h1>Agent Workspace</h1>
+
+        <p>
+            View customer tickets and update their current status.
+        </p>
+
+    </section>
+
+    <!-- Ticket Table -->
+
+    <section class="table-section">
+
+        <h2>Customer Tickets</h2>
 
         <table>
 
             <tr>
+
                 <th>Ticket ID</th>
+
                 <th>Customer</th>
+
                 <th>Issue</th>
+
+                <th>Priority</th>
+
                 <th>Status</th>
+
                 <th>Action</th>
+
             </tr>
 
             <tr>
+
                 <td>TK1001</td>
-                <td>Rahul</td>
-                <td>Login Issue</td>
-                <td class="status">Pending</td>
-                <td><button class="resolveBtn">Resolve</button></td>
-            </tr>
 
-            <tr>
-                <td>TK1002</td>
-                <td>Priya</td>
-                <td>Payment Failed</td>
-                <td class="status">Pending</td>
-                <td><button class="resolveBtn">Resolve</button></td>
-            </tr>
+                <td>Sakshi</td>
 
-            <tr>
-                <td>TK1003</td>
-                <td>Aman</td>
-                <td>Password Reset</td>
-                <td class="status">Resolved</td>
-                <td><button disabled>Resolved</button></td>
+                <td>Technical Issue</td>
+
+                <td>High</td>
+
+                <td id="status">Pending</td>
+
+                <td>
+
+                    <button id="resolveBtn">
+
+                        Resolve
+
+                    </button>
+
+                </td>
+
             </tr>
 
         </table>
 
     </section>
 
+    <!-- Footer -->
+
     <footer>
+
+        <h3>Tiko⚡</h3>
+
+        <p>Every Ticket Matters.</p>
+
+        <p>Email: support@tiko.com</p>
+
         <p>© 2026 Tiko Customer Support System</p>
+
     </footer>
 
     <script src="agent.js"></script>
 
 </body>
+
 </html>

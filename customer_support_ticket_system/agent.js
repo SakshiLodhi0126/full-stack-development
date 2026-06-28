@@ -1,21 +1,13 @@
-const buttons = document.querySelectorAll(".resolveBtn");
+// Resolve button
 
-buttons.forEach(function(button){
+var button = document.getElementById("resolveBtn");
 
-    button.addEventListener("click", function(){
+var status = document.getElementById("status");
 
-        const row = button.parentElement.parentElement;
+button.onclick = function(){
 
-        const status = row.querySelector(".status");
+    status.innerHTML = "Resolved";
 
-        status.textContent = "Resolved";
+    status.style.color = "green";
 
-        button.textContent = "Resolved";
-
-        button.disabled = true;
-
-        alert("Ticket marked as Resolved!");
-
-    });
-
-});
+}

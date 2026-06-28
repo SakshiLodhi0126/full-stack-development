@@ -1,93 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Customer Portal - Tiko</title>
+
     <link rel="stylesheet" href="customer.css">
+
 </head>
+
 <body>
 
+    <!-- Header -->
+
     <header>
-        <div class="logo">Tiko⚡</div>
+
+        <div class="logo">
+
+            <h2>Tiko⚡</h2>
+
+            <span>Every Ticket Matters.</span>
+
+        </div>
 
         <nav>
+
             <a href="tiko.html">Home</a>
+
             <a href="customer.html">Customer Portal</a>
+
             <a href="agent.html">Agent Workspace</a>
+
         </nav>
+
     </header>
 
-    <section class="container">
+    <!-- Customer Portal -->
+
+    <section class="form-section">
 
         <h1>Customer Support Portal</h1>
 
         <p>
-            Fill out the form below to create a support ticket.
+            Fill in the details below to submit your support request. Our support team will contact you as soon as possible.
         </p>
 
-        <form id="ticketForm">
+        <div class="form-box">
 
-            <label for="name">Full Name</label>
-            <input
-                type="text"
-                id="name"
-                placeholder="Enter your name"
-                required>
+            <form id="ticketForm">
 
-            <label for="email">Email</label>
-            <input
-                type="email"
-                id="email"
-                placeholder="Enter your email"
-                required>
+                <label for="name">Full Name</label>
 
-            <label for="category">Issue Category</label>
+                <input type="text" id="name" placeholder="Enter your full name" required>
 
-            <select id="category">
+                <label for="email">Email Address</label>
 
-                <option value="">Select Category</option>
-                <option>Technical Issue</option>
-                <option>Billing</option>
-                <option>Account Issue</option>
-                <option>General Query</option>
+                <input type="email" id="email" placeholder="Enter your email" required>
 
-            </select>
+                <label for="phone">Phone Number</label>
 
-            <label for="priority">Priority</label>
+                <input type="tel" id="phone" placeholder="Enter your phone number">
 
-            <select id="priority">
+                <label for="date">Date</label>
 
-                <option>Low</option>
-                <option>Medium</option>
-                <option>High</option>
+                <input type="date" id="date">
 
-            </select>
+                <label for="category">Issue Category</label>
 
-            <label for="message">Describe Your Issue</label>
+                <select id="category">
 
-            <textarea
-                id="message"
-                rows="6"
-                maxlength="250"
-                placeholder="Write your issue here..."
-                required></textarea>
+                    <option>Select Category</option>
+                    <option>Technical Issue</option>
+                    <option>Billing Issue</option>
+                    <option>Account Issue</option>
+                    <option>General Query</option>
 
-            <p id="counter">0 / 250</p>
+                </select>
 
-            <button type="submit">
-                Submit Ticket
-            </button>
+                <label for="priority">Priority</label>
 
-        </form>
+                <select id="priority">
+
+                    <option>Low</option>
+                    <option>Medium</option>
+                    <option>High</option>
+
+                </select>
+
+                <label for="issue">Describe Your Issue</label>
+
+                <textarea id="issue" rows="5" placeholder="Write your issue here..." required></textarea>
+
+                <div class="buttons">
+
+                    <button type="submit">Submit Ticket</button>
+
+                    <button type="reset">Reset Form</button>
+
+                </div>
+
+            </form>
+
+        </div>
 
     </section>
 
+    <!-- Ticket Table -->
+
+    <section class="ticket-section">
+
+        <h2>Your Recent Ticket</h2>
+
+        <table>
+
+            <tr>
+
+                <th>Ticket ID</th>
+
+                <th>Issue</th>
+
+                <th>Status</th>
+
+            </tr>
+
+            <tr>
+
+                <td>TK1001</td>
+
+                <td>Technical Issue</td>
+
+                <td>Pending</td>
+
+            </tr>
+
+        </table>
+
+    </section>
+
+    <!-- Footer -->
+
     <footer>
+
+        <h3>Tiko⚡</h3>
+
+        <p>Every Ticket Matters.</p>
+
+        <p>Email : support@tiko.com</p>
+
         <p>© 2026 Tiko Customer Support System</p>
+
     </footer>
 
     <script src="customer.js"></script>
 
 </body>
+
 </html>
